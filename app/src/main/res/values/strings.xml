@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">vCalling</string>
+    <string name="phone_hint">1521458894</string>
+    <string name="register">Register</string>
+    <string name="phonenumber">Phone Number:</string>
+    <string name="verify_account">Verify Account</string>
+    <string name="otpMessage">We send a verification code on your mobile.</string>
+    <string name="enterVerification">Enter Verification Code</string>
+    <string name="verify">Verify</string>
+    <string name="dontgetcode">Do not receive code?</string>
+    <string name="resend">Resend</string>
 </resources>
