@@ -19,19 +19,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         auth = FirebaseAuth.getInstance();
         currentUser = auth.getCurrentUser();
 
-        signOut = findViewById(R.id.logout);
-        signOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                auth.signOut();
-                Intent i = new Intent(MainActivity.this,RegistrationActivity.class);
-                startActivity(i);
-            }
-        });
     }
 
 

@@ -5,8 +5,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
+import android.view.inputmethod.InputMethodManager;
 
 import androidx.core.content.ContextCompat;
+
+import static android.content.Context.INPUT_METHOD_SERVICE;
 
 public class Utils {
 
@@ -26,6 +29,4 @@ public class Utils {
         hsv[2] *= 1.00f;
         return Color.HSVToColor(hsv);
     }
-
-
 }

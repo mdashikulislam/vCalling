@@ -9,4 +9,14 @@
     <string name="verify">Verify</string>
     <string name="dontgetcode">Do not receive code?</string>
     <string name="resend">Resend</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_setting">Setting</string>
+    <string name="title_logout">Logout</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_contact">Contacts</string>
+    <string name="hint_search_people">Search people</string>
+    <string name="title_send_friend_request">Send Friend Request</string>
+    <string name="title_cancel_friend_request">Cancel Friend Request</string>
 </resources>

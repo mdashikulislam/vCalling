@@ -12,6 +12,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -119,6 +120,14 @@ public class RegistrationActivity extends AppCompatActivity {
             }
         };
 
+//        findViewById(R.id.actRegistration).setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//                InputMethodManager manager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+//                manager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),0);
+//                return true;
+//            }
+//        });
     }
 
     private void findId(){
@@ -127,5 +136,13 @@ public class RegistrationActivity extends AppCompatActivity {
         countryCodePicker = findViewById(R.id.countryCodePicker);
     }
 
-
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null){
+            startActivity(new Intent(RegistrationActivity.this, HomeActivity.class));
+            finish();
+        }
+    }
 }
