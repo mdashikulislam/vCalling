@@ -31,20 +31,23 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home);
+
+
+
         auth = FirebaseAuth.getInstance();
         this.statusBarColorChange();
         this.toolbarSetting();
         this.initilization();
         navView.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
 
+        imagePeople.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this,FindPeopleActivity.class));
+            }
+        });
 
-//        imagePeople.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(HomeActivity.this,FindPeopleActivity.class));
-//            }
-//        });
     }
 
 
@@ -57,7 +60,7 @@ public class HomeActivity extends AppCompatActivity {
     private void initilization(){
         navView = findViewById(R.id.nav_view);
         contactRecylerView = findViewById(R.id.contactRecyleView);
-        imagePeople = findViewById(R.id.imageView);
+        imagePeople = findViewById(R.id.imgContact);
 
     }
     private void statusBarColorChange(){

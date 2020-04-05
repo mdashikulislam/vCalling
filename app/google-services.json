@@ -8,12 +8,20 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:892880757508:android:998582cf943f84b01ba651",
+        "mobilesdk_app_id": "1:892880757508:android:135344cbfac148371ba651",
         "android_client_info": {
           "package_name": "com.vcalling.mdashikulislam"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "892880757508-24v2ci3b67olfbsunpd6656uhi178gip.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vcalling.mdashikulislam",
+            "certificate_hash": "9bee6a018a80a36b2d631ddf53870badfa68908e"
+          }
+        },
         {
           "client_id": "892880757508-hsiq83uaqjv6be03751ef39hcc1tquoq.apps.googleusercontent.com",
           "client_type": 3

@@ -3,6 +3,7 @@
     package="com.vcalling.mdashikulislam">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,19 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FindPeopleActivity">
-        </activity>
+        <activity android:name=".ContactProfileActivity"></activity>
+        <activity android:name=".FindPeopleActivity"></activity>
         <activity android:name=".NotificationActivity" />
         <activity android:name=".SettingsActivity" />
         <activity
             android:name=".HomeActivity"
-            android:label="@string/title_activity_home">
-
-        </activity>
+            android:label="@string/title_activity_home"></activity>
         <activity android:name=".VerifyPhoneActivity" />
         <activity android:name=".RegistrationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

@@ -28,6 +28,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
 
@@ -66,6 +67,9 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
+
+
+
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -95,6 +99,7 @@ public class SettingsActivity extends AppCompatActivity {
 
                     progressDialog.setTitle("Account Setting");
                     progressDialog.setMessage("Please wait... we are updating your profile");
+                    progressDialog.setCancelable(false);
                     progressDialog.show();
                     final StorageReference filePath= profileImageRef.child(FirebaseAuth.getInstance().getCurrentUser().getUid());
                     final UploadTask task = filePath.putFile(imageUri);
@@ -138,6 +143,8 @@ public class SettingsActivity extends AppCompatActivity {
                 }
             }
         });
+
+        retriveInformation();
     }
 
     private void saveInfoOnly() {
@@ -152,6 +159,7 @@ public class SettingsActivity extends AppCompatActivity {
         }else{
             progressDialog.setTitle("Account Setting");
             progressDialog.setMessage("Please wait... we are updating your profile");
+            progressDialog.setCancelable(false);
             progressDialog.show();
             HashMap<String ,Object> profileMap = new HashMap<>();
             profileMap.put("uid",FirebaseAuth.getInstance().getCurrentUser().getUid());
@@ -190,7 +198,8 @@ public class SettingsActivity extends AppCompatActivity {
                     String dbName = dataSnapshot.child("name").getValue().toString();
                     String dbBio = dataSnapshot.child("bio").getValue().toString();
                     txtName.setText(dbName);
-                    txtName.setText(dbBio);
+                    txtDetails.setText(dbBio);
+                    Picasso.get().load(dbImage).placeholder(R.drawable.profile_image).into(imageView);
 
                 }
             }
@@ -210,4 +219,5 @@ public class SettingsActivity extends AppCompatActivity {
             imageView.setImageURI(imageUri);
         }
     }
+
 }

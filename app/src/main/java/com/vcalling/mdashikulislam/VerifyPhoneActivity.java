@@ -111,6 +111,7 @@ public class VerifyPhoneActivity extends AppCompatActivity {
                     public void onVerificationFailed(FirebaseException e) {
                         dialog.dismiss();
                         Toast.makeText(VerifyPhoneActivity.this, "Verification Failed" + comboNumber, Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(VerifyPhoneActivity.this, "" + e, Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -177,6 +178,7 @@ public class VerifyPhoneActivity extends AppCompatActivity {
         @Override
         public void onVerificationFailed(FirebaseException e) {
             dialog.dismiss();
+            //Toast.makeText(VerifyPhoneActivity.this, "" + e, Toast.LENGTH_LONG).show();
             Toast.makeText(VerifyPhoneActivity.this, "Verification Failed" + comboNumber, Toast.LENGTH_SHORT).show();
         }
 

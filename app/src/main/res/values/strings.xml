@@ -19,4 +19,6 @@
     <string name="hint_search_people">Search people</string>
     <string name="title_send_friend_request">Send Friend Request</string>
     <string name="title_cancel_friend_request">Cancel Friend Request</string>
+    <string name="btn_add_friend">Add Friend</string>
+    <string name="btn_cancel_friend_reqest">Cancel Friend Request</string>
 </resources>

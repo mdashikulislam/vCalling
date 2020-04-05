@@ -69,18 +69,7 @@ public class RegistrationActivity extends AppCompatActivity {
                     intent.putExtra("comboNumber",combineNumber);
                     startActivity(intent);
 
-//                    dialog.setTitle("Phone Verification");
-//                    dialog.setMessage("We Send you Code");
-//                    dialog.setCanceledOnTouchOutside(false);
-//                    dialog.show();
 
-//                    PhoneAuthProvider.getInstance().verifyPhoneNumber(
-//                            combineNumber,
-//                            60,
-//                            TimeUnit.SECONDS,
-//                            RegistrationActivity.this,
-//                            callbacks
-//                    );
 
 
                 }else{
@@ -102,32 +91,6 @@ public class RegistrationActivity extends AppCompatActivity {
             }
         });
 
-        callbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-            @Override
-            public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
-
-            }
-
-            @Override
-            public void onVerificationFailed(FirebaseException e) {
-
-            }
-
-            @Override
-            public void onCodeSent(String s, PhoneAuthProvider.ForceResendingToken forceResendingToken) {
-                super.onCodeSent(s, forceResendingToken);
-                dialog.dismiss();
-            }
-        };
-
-//        findViewById(R.id.actRegistration).setOnTouchListener(new View.OnTouchListener() {
-//            @Override
-//            public boolean onTouch(View v, MotionEvent event) {
-//                InputMethodManager manager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-//                manager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),0);
-//                return true;
-//            }
-//        });
     }
 
     private void findId(){
